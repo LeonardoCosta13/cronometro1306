@@ -1,0 +1,53 @@
+body{
+    background-color: black;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 70px;
+    color: #FFFF;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15rem;
+    font-family: sans-serif;
+    color: white;
+}
+
+div{
+    text-align: center;
+}
+
+button{
+    margin-top: 200px;
+    height: 5.2em;
+    width: 12.5em;
+    border-color: #FFFF;
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.buttons{
+    margin-top: 100px;
+}
+
+.start-btn{
+    background-color: green;
+}
+
+.pause-btn{
+    background-color: grey;
+}
+
+.stop-btn{
+    background-color: red;
+}
