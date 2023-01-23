@@ -1,21 +1,25 @@
+*{
+    font-family: sans-serif;
+
+}
+
 body{
     background-color: black;
 }
 
-h2{
+.tempo-oração{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
-    font-size: 70px;
+    font-size: 50px;
     color: #FFFF;
 }
 
-h1{
+.tempo{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15rem;
+    font-size: 16rem;
     font-family: sans-serif;
     color: white;
 }
@@ -25,15 +29,22 @@ div{
 }
 
 button{
-    margin-top: 200px;
-    height: 5.2em;
-    width: 12.5em;
+    height: 4em;
+    width: 8.5em;
     border-color: #FFFF;
     color: white;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    left: 750px;
+    bottom: 500;
 }
 
+button:active{
+    background-color: rgb(236, 224, 224)
+}
 button:hover{
-    cursor: pointer;
+    opacity: 0.7;
 }
 
 .buttons{
@@ -41,13 +52,79 @@ button:hover{
 }
 
 .start-btn{
-    background-color: green;
+    color: #FFFF;
+    background: transparent;
 }
 
+
 .pause-btn{
-    background-color: grey;
+    color: #FFFF;
+    background: transparent;
+
 }
 
 .stop-btn{
-    background-color: red;
+    color: #FFFF;
+    background: transparent;
+
 }
+
+.sinalizar-btn{
+    color: #FFFF;
+    background: transparent;
+
+}
+
+a{
+    text-decoration: none;
+    color: #FFFF;
+}
+
+.relogioAtualizado {
+    font-size: 50px;
+    text-align: center;
+    color: #FFFF;
+
+   
+    
+}
+
+.relogio {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.relogio div {
+    position: relative;
+    top: 200;
+}
+
+.relogio span {
+    width: 130px;
+    height: 100px;
+    color: #FFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    
+}
+
+.relogio .texto {
+    height: 30px;
+    font-size: 20px;
+    border-radius: 0 0 5px 5px;
+    color: #FFFF;
+
+}
+
+.relogio .ampm {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+

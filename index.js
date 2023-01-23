@@ -1,6 +1,6 @@
-var sec=0
-var min=0
-var hr=0
+let sec=0
+let min=0
+let hr=0
 
 var interval
 
@@ -16,14 +16,16 @@ function start(){
     watch()
     interval= setInterval(watch,1000)
 
+}
+
+function sinalizar(){
     setTimeout(function() {
         document.querySelector("body").style.background = "red";
-    }, 350000)
-
-    setTimeout(function() {
         var title = document.querySelector("h2");
-        title.innerHTML = "Tempo profecias/cura ultrapassado!";
-    }, 350000)
+        title.innerHTML = "Tempo de louvor encerrado!!!";
+   
+    }, 10000)
+
 }
 
 function pause(){
@@ -52,11 +54,39 @@ function watch(){
     document.getElementById('watch').innerText=twoDigits(hr)+':'+twoDigits(min)+':'+twoDigits(sec)
 }
 
-// function timerAlert(){
-//     if('#watch' < "00:00:05"){
-//         document.getElementById("body").style.color = "red";
-//     }
-// }
+// Relogio
 
-// timerAlert()
+const elementoHora = document.querySelector("#hora");
+const elementoMinuto = document.querySelector("#minutos");
+const elementoSegundo = document.querySelector("#segundos");
+const elementoAmPm = document.querySelector("#ampm");
+
+function atualizaRelogio() {
+    let h = new Date().getHours();
+    let m = new Date().getMinutes();
+    let s = new Date().getSeconds();
+    let ampm = "AM"
+
+    if(h > 12) {
+        h = h - 12;
+        ampm = "PM"
+    }
+
+    h = h < 10 ? "0" + h : h; //Faz aparecer um numero 0 se o numero for menor que 10
+    m = m < 10 ? "0" + m : m;
+    s = s < 10 ? "0" + s : s;
+
+    elementoHora.innerText = h;
+    elementoMinuto.innerText = m;
+    elementoSegundo.innerText = s;
+    elementoAmPm.innerText = ampm;
+    setTimeout(() => {
+        atualizaRelogio();
+    }, 1000)
+
+}
+
+atualizaRelogio();
+
+
 

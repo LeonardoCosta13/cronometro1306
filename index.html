@@ -8,15 +8,41 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-        <h2>Tempo de profecias/cura 35 minutos</h2>
+        <h2 class="tempo-oração">Tempo de louvor 20 minutos</h2>
 
-        <h1 id='watch'>00:00:00</h1>
+        <h1 class="tempo" id='watch'>00:00:00</h1>
+
+         <!-- /Relogio/ -->
+
+    <h2 class="relogioAtualizado">Relógio</h2>
+    <div class="relogio">
+        <div>
+            <span id="hora">00</span>
+            <span class="texto">Horas</span>
+        </div>
+        <div>
+            <span id="minutos">00</span>
+            <span class="texto">Minutos</span>
+        </div>
+        <div>
+            <span id="segundos" class="segundo">:00</span>
+            <span class="texto" class="segundo">Segundos</span>
+        </div>
+        <div>
+            <span class="ampm" id="ampm">AM</span>
+        </div>
+    </div>
 
     <div class="buttons">
         <button class="start-btn" onclick="start()">Iniciar</button>
-        <button class="pause-btn" onclick="pause()">Pausar</button>
-        <button class="stop-btn" onclick="stop()">Zerar</button>
+        <button class="stop-btn" onclick="stop()"><a href="" target="_blank">Zerar tudo</a></button>
+        <!-- <button class="stop-btn" onclick="stop()">Zerar</button> -->
+        <button class="sinalizar-btn" onclick="sinalizar()">Sinalizar</button>
     </div>
+
+   
+
+    
     <script src="index.js"></script>
 </body>
 </html>
